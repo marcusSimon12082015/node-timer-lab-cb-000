@@ -9,6 +9,6 @@ if (input.includes("s")) {
       global.clearInterval(interval)
       process.exit()
     }
-    console.log("Left: "+(inputNumber--)+"s")
+    console.log("Left: "+(--inputNumber)+"s")
     },1000)
 }
