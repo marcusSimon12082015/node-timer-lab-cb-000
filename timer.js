@@ -11,4 +11,6 @@ if (input.includes("s")) {
     }
     console.log("Left: "+(--inputNumber)+"s")
     },1000)
+} else {
+  var inputNumber = parseInt(input.substring(0,input.indexOf("m")));
 }
