@@ -13,15 +13,20 @@ if (input.includes("s")) {
     },1000)
 } else {
   var inputNumber = parseInt(input.substring(0,input.indexOf("m")));
+  console.log("inputNumber: "+inputNumber);
+  var numberOfSeconds = inputNumber * 60;
+  console.log("numberOfSeconds: "+numberOfSeconds);
   var interval = global.setInterval(function(){
-    if (inputNumber === 0) {
+    if (numberOfSeconds === 0) {
       global.clearInterval(interval)
       process.exit()
     }
-    if (inputNumber <= 60) {
-      console.log("Left: "+(--inputNumber)+"s")
+    numberOfSeconds--;
+    if (numberOfSeconds < 60) {
+      console.log("Left: "+(numberOfSeconds)+"s")
     } else {
-      console.log("Left: "+(--inputNumber)+"s")
+      console.log("Left: "+Math.floor(numberOfSeconds/60)+"min "+
+      	(numberOfSeconds%60)+"s")
     }
   },1000)
 }
