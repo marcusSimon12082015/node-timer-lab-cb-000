@@ -13,9 +13,7 @@ if (input.includes("s")) {
     },1000)
 } else {
   var inputNumber = parseInt(input.substring(0,input.indexOf("m")));
-  console.log("inputNumber: "+inputNumber);
   var numberOfSeconds = inputNumber * 60;
-  console.log("numberOfSeconds: "+numberOfSeconds);
   var interval = global.setInterval(function(){
     if (numberOfSeconds === 0) {
       global.clearInterval(interval)
