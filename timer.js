@@ -8,7 +8,7 @@ if (input.includes("s")) {
     if (inputNumber === 1) {
       global.clearInterval(interval)
     }
-    console.log("Left: "+inputNumber+"s")
+    console.log("Left: "+(inputNumber--)+"s")
     },1000)
 }
 
