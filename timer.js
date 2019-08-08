@@ -7,6 +7,7 @@ if (input.includes("s")) {
     var interval = global.setInterval(function(){
     if (inputNumber === 1) {
       global.clearInterval(interval)
+      process.exit()
     }
     console.log("Left: "+(inputNumber--)+"s")
     },1000)
