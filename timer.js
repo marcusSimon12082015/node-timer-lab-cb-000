@@ -12,5 +12,3 @@ if (input.includes("s")) {
     console.log("Left: "+(inputNumber--)+"s")
     },1000)
 }
-
-
